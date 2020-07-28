@@ -10,12 +10,12 @@ export class ForexComponent implements OnInit {
   constructor(private forexService: ForexServiceService) {}
 
   rates: any;
+  
   ngOnInit(): void {
     this.rates = [];
     this.forexService.getForexData().subscribe(
       (data) => {
-        this.rates = Object.entries(data['rates']);
-        console.log(this.rates)
+        this.rates = Object.entries(data['rates']);        
       },
       (error) => {
         console.log(error);

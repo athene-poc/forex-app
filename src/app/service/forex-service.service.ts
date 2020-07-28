@@ -7,11 +7,13 @@ import { HttpClient } from '@angular/common/http';
 export class ForexServiceService {
   constructor(private http: HttpClient) {}
 
-  BASE_URL: String = 'https://api.exchangeratesapi.io/latest?base';
+ // BASE_URL: String = 'https://api.exchangeratesapi.io/latest?base';
+  PROXY: String = 'https://cors-anywhere.herokuapp.com/';
+  BASE_URL : String = 'https://hmvxoxpbz1.execute-api.ap-southeast-2.amazonaws.com/dev/api/forex';
 
   BASE: String = "PHP";
 
   getForexData() {
-    return this.http.get(`${this.BASE_URL}${this.BASE}`);
+    return this.http.get(`${this.PROXY}${this.BASE_URL}`);
   }
 }
