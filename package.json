@@ -7,7 +7,11 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "preinstall": "npx npm-force-resolutions"
+  },
+  "resolutions": {
+    "graceful-fs": "4.2.4"
   },
   "private": true,
   "dependencies": {
@@ -20,6 +24,8 @@
     "@angular/platform-browser-dynamic": "~9.1.1",
     "@angular/router": "~9.1.1",
     "rxjs": "~6.5.4",
+    "serverless-dotenv-plugin": "^3.0.0",
+    "serverless-s3bucket-sync": "^0.1.5",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
   },
